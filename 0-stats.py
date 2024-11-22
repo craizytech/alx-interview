@@ -19,7 +19,7 @@ def process_line(line):
     """Processes each line to update metrics."""
     global total_file_size, line_count
     # Regular expression pattern to match log lines
-    pattern = r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)'
+    pattern = r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] \"GET /projects/260 HTTP/1\.1" (\d{3}) (\d+)'
     match = re.match(pattern, line)
     if match:
         status_code = int(match.group(3))
